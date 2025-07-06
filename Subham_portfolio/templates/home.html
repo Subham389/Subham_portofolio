@@ -1,0 +1,65 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subham | Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+   <!-- Header Navigation -->
+<header>
+    <div class="logo">Subham</div>
+
+    <div class="nav-right">
+        <nav>
+            <a href="{{ url_for('home') }}" class="active">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('projects') }}">Projects</a>
+        </nav>
+        <a href="{{ url_for('contact') }}" class="contact-button">
+            <i class="fas fa-envelope"></i> Contact
+        </a>
+    </div>
+</header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="intro">
+            <p>Hello,</p>
+            <h1>
+                I'm <span>Subham</span><br>
+                Web Developer.
+            </h1>
+            <p class="desc">
+                I’m a third-year B.Tech Computer Science student passionate about tech and problem-solving. 
+                My main focus is on building elegant, efficient, and impactful web solutions using modern tools and frameworks.
+            </p>
+
+            <!-- Social Links -->
+            <div class="socials">
+                <a href="https://www.instagram.com/itz_kanha2006/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/subham-pradhan-b82519296/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Subham389" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+
+            <!-- Call to Action -->
+            <a href="{{ url_for('projects') }}" class="btn">See My Work</a>
+        </div>
+
+        <!-- Profile Image -->
+        <div class="profile-pic">
+            <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Subham's Photo">
+        </div>
+    </section>
+</body>
+</html>
